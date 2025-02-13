@@ -1,4 +1,4 @@
-// Questions and answers data
+
 const questions = [
     "fkjh galkfgh sakjlhgfk shgfaa",
     "fkjh galkfgh sakjlhgfk shgfaa",
@@ -19,10 +19,10 @@ const questions = [
   
   const answers = ["a", "b", "c", "d", "e"];
   
-  // State management
+
   let currentQuestion = 0;
   
-  // DOM Elements
+
   const quizSection = document.getElementById('quiz-section');
   const resultSection = document.getElementById('result-section');
   const questionElement = document.getElementById('question');
@@ -31,22 +31,22 @@ const questions = [
   const progressElement = document.getElementById('progress');
   const heartsContainer = document.getElementById('hearts-container');
   
-  // Initialize the quiz
+
   function initQuiz() {
     showQuestion();
     createFloatingHearts();
   }
   
-  // Display current question
+
   function showQuestion() {
     questionElement.textContent = questions[currentQuestion];
     currentQuestionElement.textContent = currentQuestion + 1;
     progressElement.style.width = `${((currentQuestion + 1) / questions.length) * 100}%`;
     
-    // Clear previous answers
+
     answersContainer.innerHTML = '';
     
-    // Create answer buttons
+
     answers.forEach(answer => {
       const button = document.createElement('button');
       button.className = 'answer-button';
@@ -56,7 +56,7 @@ const questions = [
     });
   }
   
-  // Handle answer selection
+
   function handleAnswer() {
     if (currentQuestion < questions.length - 1) {
       currentQuestion++;
@@ -66,13 +66,13 @@ const questions = [
     }
   }
   
-  // Show result screen
+
   function showResult() {
     quizSection.classList.add('hidden');
     resultSection.classList.remove('hidden');
   }
   
-  // Reset quiz
+
   function resetQuiz() {
     currentQuestion = 0;
     quizSection.classList.remove('hidden');
@@ -80,7 +80,7 @@ const questions = [
     showQuestion();
   }
   
-  // Create floating hearts animation
+
   function createFloatingHearts() {
     setInterval(() => {
       const heart = document.createElement('div');
@@ -95,12 +95,11 @@ const questions = [
       
       heartsContainer.appendChild(heart);
       
-      // Remove heart after animation
+
       setTimeout(() => {
         heart.remove();
       }, animationDuration * 1000);
     }, 1000);
   }
-  
-  // Initialize the quiz when the page loads
+
   document.addEventListener('DOMContentLoaded', initQuiz);
