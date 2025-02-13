@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <div id="hearts-container"></div>
+
+
+    <div class="content">
+      <div class="quiz-container">
+        <div id="quiz-section">
+          <h2 class="title">Valentine's Quiz</h2>
+          <div class="progress-container">
+            <p class="question-counter">Question <span id="current-question">1</span> of <span id="total-questions">15</span></p>
+            <div class="progress-bar">
+              <div id="progress" class="progress"></div>
+            </div>
+          </div>
+          <p id="question" class="question-text"></p>
+          <div id="answers" class="answers-container"></div>
+        </div>
+
+        <div id="result-section" class="hidden">
+          <h2 class="title">You're Amazing! ❤</h2>
+          <p class="result-text">Thanks for playing along! You're definitely Valentine's material!</p>
+          <button onclick="resetQuiz()" class="reset-button">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
