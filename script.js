@@ -1,4 +1,3 @@
-
 const questions = [
     "fkjh galkfgh sakjlhgfk shgfaa",
     "fkjh galkfgh sakjlhgfk shgfaa",
